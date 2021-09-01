@@ -180,7 +180,7 @@ static uint64_t transform_value(drakvuf_t drakvuf, drakvuf_trap_info_t* info, co
 
         if (VMI_FAILURE == vmi_read_addr(vmi, &ctx, &_val))
         {
-            fprintf(stderr, "Failed to read address (%p)\n", (void*) val);
+            fprintf(stderr, "Failed to read address (%s: %p)\n", arg.name, (void*) val);
             _val = 0;
         }
 
